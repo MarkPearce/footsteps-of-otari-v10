@@ -1,37 +1,22 @@
 {
-  "id": "footsteps-of-otari-v10",
+  "id": "footsteps-of-otari",
   "title": "Footsteps of Otari",
   "description": "Ghostly footprints and player handouts for The PF2e Abomination Vaults module",
-  "authors": [{ "name": "Mark Pearce", "discord": "Mark Pearce#2772" }],
-  "version": "2.0.2",
+  "version": "2.0.0",
   "compatibility": {
     "minimum": 10,
     "verified": "10.286"
   },
+  "authors": [{ "name": "Mark Pearce", "discord": "Mark Pearce#2772" }],
   "packs": [
-    {
-      "name": "footsteps-of-otari-scenes",
-      "label": "Footsteps of Otari Scenes",
-      "path": "./packs/footsteps-of-otari-scenes.db",
-      "entity": "Scene",
-      "type": "Scene"
-    },
-    {
-      "name": "footsteps-of-otari-journals",
-      "label": "Footsteps of Otari Journals",
-      "path": "./packs/footsteps-of-otari-journal.db",
-      "entity": "JournalEntry",
-      "type": "JournalEntry"
-    },
     {
       "name": "footsteps-of-otari-macros",
       "label": "Footsteps of Otari Macros",
-      "path": "./packs/footsteps-of-otari-macros.db",
-      "entity": "Macro",
-      "type": "Macro"
+      "path": "packs/footsteps-of-otari-macros.db",
+      "type": "Macro",
+      "private": false
     }
   ],
-
   "relationships": {
     "systems": [
       {
@@ -43,15 +28,20 @@
     ],
     "requires": [
       {
-        "name": "socketlib",
-        "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
+        "id": "socketlib",
+        "type": "module",
+        "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json",
+        "compatibility": {
+          "minimum": "1.0.11",
+          "verified": "1.0.11"
+        }
       }
-    ],
-    "esmodules": ["scripts/init-otari.js", "greensock/esm/all.js"],
-    "styles": ["scripts/footsteps.css"]
+    ]
   },
+  "esmodules": ["scripts/init-otari.js", "greensock/esm/all.js"],
+  "styles": ["scripts/footsteps.css"],
   "socket": true,
   "url": "https://github.com/MarkPearce/footsteps-of-otari-v10",
   "manifest": "https://github.com/MarkPearce/footsteps-of-otari-v10/releases/latest/download/module.json",
-  "download": "https://github.com/MarkPearce/footsteps-of-otari-v10/releases/latest/download//footsteps-of-otari-v10.zip"
+  "download": "https://github.com/MarkPearce/footsteps-of-otari-v10/releases/latest/download/footsteps-of-otari.zip"
 }
