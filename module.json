@@ -2,10 +2,10 @@
   "id": "footsteps-of-otari",
   "title": "Footsteps of Otari",
   "description": "Ghostly footprints and player handouts for The PF2e Abomination Vaults module",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "compatibility": {
     "minimum": 10,
-    "verified": "10.286"
+    "verified": 10
   },
   "authors": [{ "name": "Mark Pearce", "discord": "Mark Pearce#2772" }],
   "packs": [
@@ -14,6 +14,20 @@
       "label": "Footsteps of Otari Macros",
       "path": "packs/footsteps-of-otari-macros.db",
       "type": "Macro",
+      "private": false
+    },
+    {
+      "name": "footsteps-of-otari-scenes",
+      "label": "Footsteps of Otari Scenes",
+      "path": "packs/footsteps-of-otari-scenes.db",
+      "type": "Scene",
+      "private": false
+    },
+    {
+      "name": "footsteps-of-otari-Journals",
+      "label": "Footsteps of Otari Journals",
+      "path": "packs/footsteps-of-otari-journal.db",
+      "type": "JournalEntry",
       "private": false
     }
   ],
