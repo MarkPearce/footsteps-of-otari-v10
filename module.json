@@ -2,33 +2,50 @@
   "id": "footsteps-of-otari",
   "title": "Footsteps of Otari",
   "description": "Ghostly footprints and player handouts for The PF2e Abomination Vaults module",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "compatibility": {
-    "minimum": 10,
-    "verified": 10
+    "minimum": "10",
+    "verified": "11"
   },
-  "authors": [{ "name": "Mark Pearce", "discord": "Mark Pearce#2772" }],
+  "authors": [
+    {
+      "name": "Mark Pearce",
+      "discord": "Mark Pearce#2772"
+    }
+  ],
   "packs": [
     {
       "name": "footsteps-of-otari-macros",
       "label": "Footsteps of Otari Macros",
-      "path": "packs/footsteps-of-otari-macros.db",
+      "path": "packs/footsteps-of-otari-macros",
       "type": "Macro",
-      "private": false
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "footsteps-of-otari-scenes",
       "label": "Footsteps of Otari Scenes",
-      "path": "packs/footsteps-of-otari-scenes.db",
+      "path": "packs/footsteps-of-otari-scenes",
       "type": "Scene",
-      "private": false
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "footsteps-of-otari-Journals",
       "label": "Footsteps of Otari Journals",
-      "path": "packs/footsteps-of-otari-journal.db",
+      "path": "packs/footsteps-of-otari-journal",
       "type": "JournalEntry",
-      "private": false
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "relationships": {
@@ -37,7 +54,8 @@
         "id": "pf2e",
         "compatibility": {
           "minimum": "4.0.0"
-        }
+        },
+        "type": "system"
       }
     ],
     "requires": [
@@ -52,8 +70,13 @@
       }
     ]
   },
-  "esmodules": ["scripts/init-otari.js", "greensock/esm/all.js"],
-  "styles": ["scripts/footsteps.css"],
+  "esmodules": [
+    "scripts/init-otari.js",
+    "greensock/esm/all.js"
+  ],
+  "styles": [
+    "scripts/footsteps.css"
+  ],
   "socket": true,
   "url": "https://github.com/MarkPearce/footsteps-of-otari-v10",
   "manifest": "https://github.com/MarkPearce/footsteps-of-otari-v10/releases/latest/download/module.json",
