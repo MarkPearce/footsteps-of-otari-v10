@@ -2,7 +2,7 @@
   "id": "footsteps-of-otari",
   "title": "Footsteps of Otari",
   "description": "Ghostly footprints and player handouts for The PF2e Abomination Vaults module",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "compatibility": {
     "minimum": "10",
     "verified": "11"
