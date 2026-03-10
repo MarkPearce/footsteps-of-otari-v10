@@ -1,130 +1,90 @@
 /**
- * Define your class that extends FormApplication
+ * Define your class that extends ApplicationV2
  */
-export class GhostApplication extends FormApplication {
-  constructor(exampleOption) {
-    super()
-    this.totalProgress = 0
-    this.playbackSpeed = 1
-    this.mapVersion = 'remaster'
-    this.mapLevel = 'two'
-    this.playIcon
-    this.pauseIcon
-    this.timelineSlider
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
+
+export class GhostApplication extends HandlebarsApplicationMixin(ApplicationV2) {
+  constructor(options = {}) {
+    super(options);
+    this.totalProgress = 0;
+    this.playbackSpeed = 1;
+    this.mapVersion = 'remaster';
+    this.mapLevel = 'two';
   }
 
-  static get defaultOptions() {
-    const _default = super.defaultOptions
-    return mergeObject(_default, {
-      popOut: true,
-      template: `./modules/footsteps-of-otari/scripts/ghostApplication.hbs`,
-      id: 'footsteps-of-otari',
-      title: 'Footsteps of Otari',
-      width: 480,
-      classes: [..._default.classes, 'footsteps'],
-      closeOnSubmit: false,
-      submitOnClose: false,
-      submitOnChange: false,
-    })
-  }
+  static DEFAULT_OPTIONS = {
+    id: 'footsteps-of-otari',
+    tag: 'form',
+    classes: ['footsteps'],
+    position: { width: 480 },
+    window: { title: 'Footsteps of Otari', resizable: false },
+    actions: {
+      playToggle: GhostApplication.#playToggle,
+      createGhost: GhostApplication.#createGhost,
+      removeGhost: GhostApplication.#removeGhost,
+    }
+  };
 
-  getData() {
-    // Send data to the template
+  static PARTS = {
+    form: {
+      template: 'modules/footsteps-of-otari/scripts/ghostApplication.hbs'
+    }
+  };
+
+  async _prepareContext(options) {
     return {
       progressBar: this.totalProgress * 100,
-    }
-  }
-
-  async _updateObject(event, formData) {
-    //this.render() // rerenders the FormApp with the new data.
+      mapVersion: this.mapVersion,
+      mapLevel: this.mapLevel,
+    };
   }
 
   /////////////////////////////
-  // Controller UI Listeners //
+  // Action Handlers         //
   /////////////////////////////
 
-  activateListeners(html) {
-    super.activateListeners(html)
-    this.playIcon = html.find('.fa-play')
-    this.pauseIcon = html.find('.fa-pause')
-    //timeline slider
-    this.timelineSlider = html.find('.footsteps-of-otari-timelineSlider')
-    this.timelineSlider.mousedown((event) => this.mousedownGhostSlider(event))
-    this.timelineSlider.on('input', (event) => {
-      this.dragGhostSlider(event)
-    })
-    this.timelineSlider.on('change', (event) => {
-      this.changeGhostSlider(event)
-    })
-    //Version radios
-    html
-      .find('input:radio[name=footsteps-of-otari-map-version]')
-      .change((event) => this.radioVersion(event))
-    //Level radios
-    html
-      .find('input:radio[name=footsteps-of-otari-floor]')
-      .change((event) => this.radioLevel(event))
-    //play button
-    html
-      .find('.footsteps-of-otari-playControl')
-      .click((event) => this.buttonPlayToggle(event))
-    //create button
-    html
-      .find('.footsteps-of-otari-create')
-      .click((event) => this.buttonCreate(event))
+  static #playToggle(event, target) {
+    game.modules.get('footsteps-of-otari')?.api?._playToggle();
+  }
 
-    //remove button
-    html
-      .find('.footsteps-of-otari-erase')
-      .click((event) => this.buttonRemove(event))
-    //speed selector
-    html
-      .find('.footsteps-of-otari-playSpeed')
-      .change((event) => this.selectSpeed(event))
+  static #createGhost(event, target) {
+    game.modules.get('footsteps-of-otari')?.api?._makeGhost();
+  }
 
-    // set radio values based on map
-    let radioVersionClassic = html.find(
-      '.footsteps-of-otari-radioVersionClassic',
-    )
-    let radioVersionRemaster = html.find(
-      '.footsteps-of-otari-radioVersionRemaster',
-    )
-    let radioVersionPDF = html.find('.footsteps-of-otari-radioVersionPDF')
-    let radioVersionCommunity = html.find(
-      '.footsteps-of-otari-radioVersionCommunity',
-    )
+  static #removeGhost(event, target) {
+    game.modules.get('footsteps-of-otari')?.api?._removeGhosts();
+  }
 
-    if (this.mapVersion == 'remaster') {
-      radioVersionRemaster[0].checked = true
-    }
+  /////////////////////////////
+  // Lifecycle               //
+  /////////////////////////////
 
-    if (this.mapVersion == 'classic') {
-      radioVersionClassic[0].checked = true
-    }
+  _onRender(context, options) {
+    const el = this.element;
 
-    if (this.mapVersion == 'community') {
-      radioVersionCommunity[0].checked = true
-    }
+    // Timeline slider
+    const slider = el.querySelector('.footsteps-of-otari-timelineSlider');
+    slider.addEventListener('mousedown', (event) => this.mousedownGhostSlider(event));
+    slider.addEventListener('input', (event) => this.dragGhostSlider(event));
+    slider.addEventListener('change', (event) => this.changeGhostSlider(event));
 
-    if (this.mapVersion == 'pdf') {
-      radioVersionPDF[0].checked = true
-    }
+    // Version radios
+    el.querySelectorAll('input[name="footsteps-of-otari-map-version"]').forEach(radio => {
+      radio.addEventListener('change', (event) => this.radioVersion(event));
+    });
 
-    //
+    // Level radios
+    el.querySelectorAll('input[name="footsteps-of-otari-floor"]').forEach(radio => {
+      radio.addEventListener('change', (event) => this.radioLevel(event));
+    });
 
-    let radioLevelTwo = html.find('.footsteps-of-otari-radioLevelTwo')
-    let radioLevelThree = html.find('.footsteps-of-otari-radioLevelThree')
-    let radioLevelFour = html.find('.footsteps-of-otari-radioLevelFour')
+    // Speed selector
+    el.querySelector('.footsteps-of-otari-playSpeed')
+      .addEventListener('change', (event) => this.selectSpeed(event));
+  }
 
-    if (this.mapLevel == 'two') {
-      radioLevelTwo[0].checked = true
-    }
-    if (this.mapLevel == 'three') {
-      radioLevelThree[0].checked = true
-    }
-    if (this.mapLevel == 'four') {
-      radioLevelFour[0].checked = true
-    }
+  _onClose(options) {
+    game.modules.get('footsteps-of-otari')?.api?._removeGhosts();
   }
 
   /////////////////////////////
@@ -132,52 +92,40 @@ export class GhostApplication extends FormApplication {
   /////////////////////////////
 
   dragGhostSlider(event) {
-    this.totalProgress = event.currentTarget.value / 100
+    this.totalProgress = event.currentTarget.value / 100;
     game.modules
       .get('footsteps-of-otari')
-      ?.api?._dragGhostSlider(this.totalProgress)
+      ?.api?._dragGhostSlider(this.totalProgress);
   }
 
   mousedownGhostSlider(event) {
-    game.modules.get('footsteps-of-otari')?.api?._mousedownGhostSlider()
+    game.modules.get('footsteps-of-otari')?.api?._mousedownGhostSlider();
   }
 
   changeGhostSlider(event) {
-    this.totalProgress = event.currentTarget.value / 100
+    this.totalProgress = event.currentTarget.value / 100;
     game.modules
       .get('footsteps-of-otari')
-      ?.api?._changeGhostSlider(this.totalProgress)
-  }
-
-  buttonPlayToggle(event) {
-    game.modules.get('footsteps-of-otari')?.api?._playToggle()
+      ?.api?._changeGhostSlider(this.totalProgress);
   }
 
   radioVersion(event) {
-    this.mapVersion = event.currentTarget.value
+    this.mapVersion = event.currentTarget.value;
     game.modules
       .get('footsteps-of-otari')
-      ?.api?._selectMapVersion(this.mapVersion)
+      ?.api?._selectMapVersion(this.mapVersion);
   }
 
   radioLevel(event) {
-    this.mapLevel = event.currentTarget.value
-    game.modules.get('footsteps-of-otari')?.api?._selectMapLevel(this.mapLevel)
-  }
-
-  buttonRemove(event) {
-    game.modules.get('footsteps-of-otari')?.api?._removeGhosts()
-  }
-
-  buttonCreate(event) {
-    game.modules.get('footsteps-of-otari')?.api?._makeGhost()
+    this.mapLevel = event.currentTarget.value;
+    game.modules.get('footsteps-of-otari')?.api?._selectMapLevel(this.mapLevel);
   }
 
   selectSpeed(event) {
-    this.playbackSpeed = Number(event.currentTarget.value)
+    this.playbackSpeed = Number(event.currentTarget.value);
     game.modules
       .get('footsteps-of-otari')
-      ?.api?._setPlaybackSpeed(this.playbackSpeed)
+      ?.api?._setPlaybackSpeed(this.playbackSpeed);
   }
 
   /////////////////////////////
@@ -185,18 +133,23 @@ export class GhostApplication extends FormApplication {
   //////////////////////////////
 
   setToggleButton(isPlaying) {
-    if (isPlaying == true) {
-      this.playIcon.css('display', 'none')
-      this.pauseIcon.css('display', 'block')
+    const el = this.element;
+    if (!el) return;
+    const playIcon = el.querySelector('.fa-play');
+    const pauseIcon = el.querySelector('.fa-pause');
+    if (isPlaying) {
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = 'block';
     } else {
-      this.playIcon.css('display', 'block')
-      this.pauseIcon.css('display', 'none')
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
     }
   }
 
   updateTimeline() {
-    this.timelineSlider.val(this.totalProgress * 100)
+    const el = this.element;
+    if (!el) return;
+    const slider = el.querySelector('.footsteps-of-otari-timelineSlider');
+    if (slider) slider.value = this.totalProgress * 100;
   }
 }
-
-window.GhostApplication = GhostApplication

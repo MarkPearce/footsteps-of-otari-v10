@@ -5,7 +5,7 @@
   "version": "2.0.4",
   "compatibility": {
     "minimum": "10",
-    "verified": "12"
+    "verified": "13"
   },
   "authors": [
     {
@@ -71,8 +71,7 @@
     ]
   },
   "esmodules": [
-    "scripts/init-otari.js",
-    "greensock/esm/all.js"
+    "scripts/init-otari.js"
   ],
   "styles": [
     "scripts/footsteps.css"

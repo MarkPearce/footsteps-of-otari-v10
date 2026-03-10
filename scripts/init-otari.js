@@ -22,13 +22,7 @@ let mapVersion = "remaster";
 let mapLevel = "two";
 let ghostExists = false; // is there a ghost?
 
-let ghostApplication = new GhostApplication(
-  0,
-  isPlaying,
-  playbackSpeed,
-  mapVersion,
-  mapLevel
-); // pass initial props
+let ghostApplication = new GhostApplication();
 
 /////////////////////////////////////////
 ///  Ghost animation and PIXI stuff   //
@@ -40,7 +34,7 @@ let ghostTimeline = gsap.timeline({ onUpdate: ghostUpdater, paused: true }); // 
 let ghostContainer = new PIXI.Container();
 ghostContainer.elevation = 0;
 ghostContainer.sort = 200;
-ghostContainer.sortLayer = PrimaryCanvasGroup.SORT_LAYERS.TOKENS;
+ghostContainer.sortLayer = foundry.canvas.groups.PrimaryCanvasGroup.SORT_LAYERS.TOKENS;
 let ghostNull = new PIXI.Container();
 let ghost; //sprite
 let ghostLight;
@@ -181,10 +175,7 @@ Hooks.on("canvasInit", async () => {
   ghostApplication.close();
 });
 
-Hooks.on("closeGhostApplication", async () => {
-  //get rid of all ghosts
-  game.modules.get("footsteps-of-otari")?.api?._removeGhosts();
-});
+// Close hook is now handled by _onClose() in GhostApplication class
 
 Hooks.once("ready", async () => {
   gsap.registerPlugin(MotionPathPlugin, PixiPlugin);
@@ -748,7 +739,7 @@ async function openFootstepsController() {
   await game.modules
     .get("footsteps-of-otari")
     ?.api?._updatePathSelection(mapVersion, mapLevel, ghostTimeline.progress());
-  ghostApplication.render(true);
+  ghostApplication.render({ force: true });
 }
 
 async function updatePathSelection(args) {
