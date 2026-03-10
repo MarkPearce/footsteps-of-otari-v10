@@ -34,7 +34,7 @@ let ghostTimeline = gsap.timeline({ onUpdate: ghostUpdater, paused: true }); // 
 let ghostContainer = new PIXI.Container();
 ghostContainer.elevation = 0;
 ghostContainer.sort = 200;
-ghostContainer.sortLayer = foundry.canvas.groups.PrimaryCanvasGroup.SORT_LAYERS.TOKENS;
+ghostContainer.sortLayer = foundry.canvas.groups.PrimaryCanvasGroup.SORT_LAYERS.DRAWINGS;
 let ghostNull = new PIXI.Container();
 let ghost; //sprite
 let ghostLight;
@@ -755,6 +755,9 @@ async function removeGhost() {
     ghostContainer.removeChild(ghostNull);
     ghostNull = new PIXI.Container();
     ghostContainer = new PIXI.Container();
+    ghostContainer.elevation = 0;
+    ghostContainer.sort = 200;
+    ghostContainer.sortLayer = foundry.canvas.groups.PrimaryCanvasGroup.SORT_LAYERS.DRAWINGS;
     ghostTimeline.clear();
     //reset defaults
     ghostExists = false;
