@@ -18,8 +18,6 @@ To use: Add the Macro "Open Footsteps Control" from the Footsteps and Maps Macro
 Click on it to open the floating control window. If you havent modified the MapIDs it will auto-detect the path to play.
 Use play/pause/speed control on the animation, or scrub with the timeline
 
-![ghostly control](https://imgur.com/yKPTt1j.gif)
-
 ![control ui](https://imgur.com/lcCrqf1.png)
 
 **NPC Map Journals**
