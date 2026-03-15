@@ -30,7 +30,7 @@
         "default": -1
       },
       "flags": {},
-      "_key": "!journals.pages!PDrDA8bYGJVVb1NY.LAzaaKOrRm1wESGA"
+      "_key": "!journal.pages!PDrDA8bYGJVVb1NY.LAzaaKOrRm1wESGA"
     }
   ],
   "ownership": {
@@ -47,5 +47,5 @@
   },
   "folder": null,
   "sort": 0,
-  "_key": "!journals!PDrDA8bYGJVVb1NY"
+  "_key": "!journal!PDrDA8bYGJVVb1NY"
 }

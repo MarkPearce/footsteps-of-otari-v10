@@ -26,7 +26,7 @@
         "default": -1
       },
       "flags": {},
-      "_key": "!journals.pages!xlZsxwCLb0MwLRzH.wefUnSoFB7lhq99f"
+      "_key": "!journal.pages!xlZsxwCLb0MwLRzH.wefUnSoFB7lhq99f"
     },
     {
       "sort": 550000,
@@ -53,7 +53,7 @@
         "default": -1
       },
       "flags": {},
-      "_key": "!journals.pages!xlZsxwCLb0MwLRzH.7uJ09keRc0Jspm0U"
+      "_key": "!journal.pages!xlZsxwCLb0MwLRzH.7uJ09keRc0Jspm0U"
     },
     {
       "sort": 600000,
@@ -80,7 +80,7 @@
         "default": -1
       },
       "flags": {},
-      "_key": "!journals.pages!xlZsxwCLb0MwLRzH.SQgGoSAO4h2Mh7rf"
+      "_key": "!journal.pages!xlZsxwCLb0MwLRzH.SQgGoSAO4h2Mh7rf"
     },
     {
       "sort": 500000,
@@ -107,7 +107,7 @@
         "default": -1
       },
       "flags": {},
-      "_key": "!journals.pages!xlZsxwCLb0MwLRzH.pbpC3XIxr60C1p59"
+      "_key": "!journal.pages!xlZsxwCLb0MwLRzH.pbpC3XIxr60C1p59"
     },
     {
       "sort": 700000,
@@ -134,7 +134,7 @@
         "default": -1
       },
       "flags": {},
-      "_key": "!journals.pages!xlZsxwCLb0MwLRzH.RRbKszL60GwUuZO6"
+      "_key": "!journal.pages!xlZsxwCLb0MwLRzH.RRbKszL60GwUuZO6"
     },
     {
       "sort": 800000,
@@ -161,7 +161,7 @@
         "default": -1
       },
       "flags": {},
-      "_key": "!journals.pages!xlZsxwCLb0MwLRzH.N1CXeCnrHqKd6yJ1"
+      "_key": "!journal.pages!xlZsxwCLb0MwLRzH.N1CXeCnrHqKd6yJ1"
     },
     {
       "sort": 900000,
@@ -188,7 +188,7 @@
         "default": -1
       },
       "flags": {},
-      "_key": "!journals.pages!xlZsxwCLb0MwLRzH.X1Zijhq6Rxw5A3t6"
+      "_key": "!journal.pages!xlZsxwCLb0MwLRzH.X1Zijhq6Rxw5A3t6"
     },
     {
       "sort": 1000000,
@@ -215,7 +215,7 @@
         "default": -1
       },
       "flags": {},
-      "_key": "!journals.pages!xlZsxwCLb0MwLRzH.plQpm5LaZ0UUoBUy"
+      "_key": "!journal.pages!xlZsxwCLb0MwLRzH.plQpm5LaZ0UUoBUy"
     },
     {
       "sort": 1100000,
@@ -242,7 +242,7 @@
         "default": -1
       },
       "flags": {},
-      "_key": "!journals.pages!xlZsxwCLb0MwLRzH.A7RvNwIyCn1onqSQ"
+      "_key": "!journal.pages!xlZsxwCLb0MwLRzH.A7RvNwIyCn1onqSQ"
     },
     {
       "sort": 1200000,
@@ -269,7 +269,7 @@
         "default": -1
       },
       "flags": {},
-      "_key": "!journals.pages!xlZsxwCLb0MwLRzH.rAAghcOgBoLBh1ez"
+      "_key": "!journal.pages!xlZsxwCLb0MwLRzH.rAAghcOgBoLBh1ez"
     },
     {
       "sort": 150000,
@@ -296,7 +296,7 @@
         "default": -1
       },
       "flags": {},
-      "_key": "!journals.pages!xlZsxwCLb0MwLRzH.LLhSF6pno8FcV75y"
+      "_key": "!journal.pages!xlZsxwCLb0MwLRzH.LLhSF6pno8FcV75y"
     }
   ],
   "folder": null,
@@ -315,5 +315,5 @@
     "lastModifiedBy": "1H5XKXyphHEmdKWt"
   },
   "_id": "xlZsxwCLb0MwLRzH",
-  "_key": "!journals!xlZsxwCLb0MwLRzH"
+  "_key": "!journal!xlZsxwCLb0MwLRzH"
 }
