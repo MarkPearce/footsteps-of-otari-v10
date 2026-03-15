@@ -20,18 +20,18 @@
     justify-content: left;
 }
 
-.footsteps .footsteps-of-otari-optionLabel {
+.footsteps .footsteps-and-maps-optionLabel {
     font-weight: 700;
     width: 120px;
 }
 
-.footsteps .footsteps-of-otari-versionGroup {
+.footsteps .footsteps-and-maps-versionGroup {
     display: flex;
     flex-direction: row;
     justify-content: left;
     
 }
-.footsteps .footsteps-of-otari-community {
+.footsteps .footsteps-and-maps-community {
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -41,32 +41,32 @@
        border-width: 1px;
 }
 
-.footsteps .footsfootsteps-of-otari-premium {
+.footsteps .footsfootsteps-and-maps-premium {
     display: flex;
     flex-direction: column;
     justify-content: left;
     margin-left: 1em;
 }
 
-.footsteps .footsteps-of-otari-versionLabel{
+.footsteps .footsteps-and-maps-versionLabel{
     font-size: 12px;
     color:#626262;
     padding-bottom: .25em;
 }
-.footsteps .footsteps-of-otari-radio-group {
+.footsteps .footsteps-and-maps-radio-group {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
 }
 
-.footsteps .footsteps-of-otari-radio {
+.footsteps .footsteps-and-maps-radio {
     padding-left: 0px;
     margin-left: 0px;
     padding-right: .5em;
 }
 
-.footsteps .footsteps-of-otari-ghostControls {
+.footsteps .footsteps-and-maps-ghostControls {
     display: flex;
     margin-top: .5em;
     flex-direction: row;
@@ -74,44 +74,44 @@
     align-content: center;
 }
 
-.footsteps .footsteps-of-otari-playControl {
+.footsteps .footsteps-and-maps-playControl {
     width: 48px;
     align-content: center;
 }
 
-.footsteps .footsteps-of-otari-playSpeed {
+.footsteps .footsteps-and-maps-playSpeed {
     width: 56px;
     text-align: left;
 }
 
-.footsteps .footsteps-of-otari-time {
+.footsteps .footsteps-and-maps-time {
     flex-grow: 1;
     padding-left: .5em;
 }
 
-.footsteps .footsteps-of-otari-timelineSlider {
+.footsteps .footsteps-and-maps-timelineSlider {
     display: block;
     width: 100%;
     height: 24px;
 }
 
-.footsteps .footsteps-of-otari-button {
+.footsteps .footsteps-and-maps-button {
     height: 32px;
 }
 
-.footsteps .footsteps-of-otari-footer {
+.footsteps .footsteps-and-maps-footer {
     margin-top: .5em;
     display: flex;
     width: 100%;
     justify-content: right;
 }
 
-.footsteps .footsteps-of-otari-create {
+.footsteps .footsteps-and-maps-create {
     margin-right: .5em;
     padding-left: .5em;
 }
 
-.footsteps .footsteps-of-otari-erase {
+.footsteps .footsteps-and-maps-erase {
     padding-right: .5em;
     margin-left: .5em;
 }

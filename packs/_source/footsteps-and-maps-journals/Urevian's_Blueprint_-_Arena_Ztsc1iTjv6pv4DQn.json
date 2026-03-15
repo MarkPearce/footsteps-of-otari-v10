@@ -1,0 +1,51 @@
+{
+  "_id": "Ztsc1iTjv6pv4DQn",
+  "name": "Urevian's Blueprint - Arena",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.footsteps-and-maps.footsteps-and-maps-journals.Ztsc1iTjv6pv4DQn"
+    }
+  },
+  "pages": [
+    {
+      "name": "Urevian's Blueprint - Arena",
+      "type": "image",
+      "src": "modules/footsteps-and-maps/artwork/npc-maps/D10-av-blueprint-level05.webp",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "_id": "NG7EqABPPuxdrwQu",
+      "image": {},
+      "text": {
+        "format": 1
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!Ztsc1iTjv6pv4DQn.NG7EqABPPuxdrwQu"
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "1H5XKXyphHEmdKWt": 3
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.2",
+    "coreVersion": "10.291",
+    "createdTime": 1670773784179,
+    "modifiedTime": 1670773784179,
+    "lastModifiedBy": "1H5XKXyphHEmdKWt"
+  },
+  "folder": null,
+  "sort": 0,
+  "_key": "!journal!Ztsc1iTjv6pv4DQn"
+}

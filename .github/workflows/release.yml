@@ -25,7 +25,7 @@ jobs:
 
       - name: Build zip
         run: |
-          zip -r footsteps-of-otari.zip . \
+          zip -r footsteps-and-maps.zip . \
             -x ".git/*" \
             -x ".github/*" \
             -x ".gitattributes" \
@@ -36,12 +36,12 @@ jobs:
             -x "packs/*/LOG" \
             -x "packs/*/LOG.old" \
             -x "packs/*/*.log" \
-            -x "footsteps-of-otari.zip"
+            -x "footsteps-and-maps.zip"
 
       - name: Create release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            footsteps-of-otari.zip
+            footsteps-and-maps.zip
             module.json
           generate_release_notes: true

@@ -13,11 +13,11 @@ export class GhostApplication extends HandlebarsApplicationMixin(ApplicationV2) 
   }
 
   static DEFAULT_OPTIONS = {
-    id: 'footsteps-of-otari',
+    id: 'footsteps-and-maps',
     tag: 'form',
     classes: ['footsteps'],
     position: { width: 480 },
-    window: { title: 'Footsteps of Otari', resizable: false },
+    window: { title: 'Footsteps and Maps', resizable: false },
     actions: {
       playToggle: GhostApplication.#playToggle,
       createGhost: GhostApplication.#createGhost,
@@ -27,7 +27,7 @@ export class GhostApplication extends HandlebarsApplicationMixin(ApplicationV2) 
 
   static PARTS = {
     form: {
-      template: 'modules/footsteps-of-otari/scripts/ghostApplication.hbs'
+      template: 'modules/footsteps-and-maps/scripts/ghostApplication.hbs'
     }
   };
 
@@ -44,15 +44,15 @@ export class GhostApplication extends HandlebarsApplicationMixin(ApplicationV2) 
   /////////////////////////////
 
   static #playToggle(event, target) {
-    game.modules.get('footsteps-of-otari')?.api?._playToggle();
+    game.modules.get('footsteps-and-maps')?.api?._playToggle();
   }
 
   static #createGhost(event, target) {
-    game.modules.get('footsteps-of-otari')?.api?._makeGhost();
+    game.modules.get('footsteps-and-maps')?.api?._makeGhost();
   }
 
   static #removeGhost(event, target) {
-    game.modules.get('footsteps-of-otari')?.api?._removeGhosts();
+    game.modules.get('footsteps-and-maps')?.api?._removeGhosts();
   }
 
   /////////////////////////////
@@ -63,28 +63,28 @@ export class GhostApplication extends HandlebarsApplicationMixin(ApplicationV2) 
     const el = this.element;
 
     // Timeline slider
-    const slider = el.querySelector('.footsteps-of-otari-timelineSlider');
+    const slider = el.querySelector('.footsteps-and-maps-timelineSlider');
     slider.addEventListener('mousedown', (event) => this.mousedownGhostSlider(event));
     slider.addEventListener('input', (event) => this.dragGhostSlider(event));
     slider.addEventListener('change', (event) => this.changeGhostSlider(event));
 
     // Version radios
-    el.querySelectorAll('input[name="footsteps-of-otari-map-version"]').forEach(radio => {
+    el.querySelectorAll('input[name="footsteps-and-maps-map-version"]').forEach(radio => {
       radio.addEventListener('change', (event) => this.radioVersion(event));
     });
 
     // Level radios
-    el.querySelectorAll('input[name="footsteps-of-otari-floor"]').forEach(radio => {
+    el.querySelectorAll('input[name="footsteps-and-maps-floor"]').forEach(radio => {
       radio.addEventListener('change', (event) => this.radioLevel(event));
     });
 
     // Speed selector
-    el.querySelector('.footsteps-of-otari-playSpeed')
+    el.querySelector('.footsteps-and-maps-playSpeed')
       .addEventListener('change', (event) => this.selectSpeed(event));
   }
 
   _onClose(options) {
-    game.modules.get('footsteps-of-otari')?.api?._removeGhosts();
+    game.modules.get('footsteps-and-maps')?.api?._removeGhosts();
   }
 
   /////////////////////////////
@@ -94,37 +94,37 @@ export class GhostApplication extends HandlebarsApplicationMixin(ApplicationV2) 
   dragGhostSlider(event) {
     this.totalProgress = event.currentTarget.value / 100;
     game.modules
-      .get('footsteps-of-otari')
+      .get('footsteps-and-maps')
       ?.api?._dragGhostSlider(this.totalProgress);
   }
 
   mousedownGhostSlider(event) {
-    game.modules.get('footsteps-of-otari')?.api?._mousedownGhostSlider();
+    game.modules.get('footsteps-and-maps')?.api?._mousedownGhostSlider();
   }
 
   changeGhostSlider(event) {
     this.totalProgress = event.currentTarget.value / 100;
     game.modules
-      .get('footsteps-of-otari')
+      .get('footsteps-and-maps')
       ?.api?._changeGhostSlider(this.totalProgress);
   }
 
   radioVersion(event) {
     this.mapVersion = event.currentTarget.value;
     game.modules
-      .get('footsteps-of-otari')
+      .get('footsteps-and-maps')
       ?.api?._selectMapVersion(this.mapVersion);
   }
 
   radioLevel(event) {
     this.mapLevel = event.currentTarget.value;
-    game.modules.get('footsteps-of-otari')?.api?._selectMapLevel(this.mapLevel);
+    game.modules.get('footsteps-and-maps')?.api?._selectMapLevel(this.mapLevel);
   }
 
   selectSpeed(event) {
     this.playbackSpeed = Number(event.currentTarget.value);
     game.modules
-      .get('footsteps-of-otari')
+      .get('footsteps-and-maps')
       ?.api?._setPlaybackSpeed(this.playbackSpeed);
   }
 
@@ -149,7 +149,7 @@ export class GhostApplication extends HandlebarsApplicationMixin(ApplicationV2) 
   updateTimeline() {
     const el = this.element;
     if (!el) return;
-    const slider = el.querySelector('.footsteps-of-otari-timelineSlider');
+    const slider = el.querySelector('.footsteps-and-maps-timelineSlider');
     if (slider) slider.value = this.totalProgress * 100;
   }
 }

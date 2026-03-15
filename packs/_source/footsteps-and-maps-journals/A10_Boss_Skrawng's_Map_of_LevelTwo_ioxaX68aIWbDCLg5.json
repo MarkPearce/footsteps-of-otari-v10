@@ -1,0 +1,51 @@
+{
+  "name": "A10 Boss Skrawng's Map of LevelTwo",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.footsteps-and-maps.footsteps-and-maps-journals.jmUTkwDzJTBiEeQp"
+    }
+  },
+  "_id": "ioxaX68aIWbDCLg5",
+  "pages": [
+    {
+      "name": "A10 Boss Skrawng's Map of LevelTwo",
+      "type": "image",
+      "src": "modules/footsteps-and-maps/artwork/npc-maps/A10-boss-skrawng-map-lvl02.webp",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "_id": "vGUtC6tfC2auc2p7",
+      "image": {},
+      "text": {
+        "format": 1
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!ioxaX68aIWbDCLg5.vGUtC6tfC2auc2p7"
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "1H5XKXyphHEmdKWt": 3
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.2",
+    "coreVersion": "10.291",
+    "createdTime": 1670773784180,
+    "modifiedTime": 1670773784180,
+    "lastModifiedBy": "1H5XKXyphHEmdKWt"
+  },
+  "folder": null,
+  "sort": 0,
+  "_key": "!journal!ioxaX68aIWbDCLg5"
+}

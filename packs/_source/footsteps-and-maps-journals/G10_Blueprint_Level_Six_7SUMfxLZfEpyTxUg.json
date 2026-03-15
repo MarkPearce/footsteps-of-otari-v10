@@ -1,0 +1,51 @@
+{
+  "_id": "7SUMfxLZfEpyTxUg",
+  "name": "G10 Blueprint Level Six",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.footsteps-and-maps.footsteps-and-maps-journals.7SUMfxLZfEpyTxUg"
+    }
+  },
+  "pages": [
+    {
+      "name": "G10 Blueprint Level Six",
+      "type": "image",
+      "src": "modules/footsteps-and-maps/artwork/npc-maps/D10-av-blueprint-level06.webp",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "_id": "dfzpFPepzNRQwr9g",
+      "image": {},
+      "text": {
+        "format": 1
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!7SUMfxLZfEpyTxUg.dfzpFPepzNRQwr9g"
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "1H5XKXyphHEmdKWt": 3
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.2",
+    "coreVersion": "10.291",
+    "createdTime": 1670773784174,
+    "modifiedTime": 1670773784174,
+    "lastModifiedBy": "1H5XKXyphHEmdKWt"
+  },
+  "folder": null,
+  "sort": 0,
+  "_key": "!journal!7SUMfxLZfEpyTxUg"
+}

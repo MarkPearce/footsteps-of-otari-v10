@@ -1,36 +1,36 @@
 <div class="flexcol ghostApp">
     <div class="map-selection-block">
-        <label class="footsteps-of-otari-optionLabel" for="map-version">Map Version:</label>
-        <div class="footsteps-of-otari-radio-group">
-            <div class="footsteps-of-otari-community">
-                <p class="footsteps-of-otari-versionLabel">Community Content</p>
-                <div class="footsteps-of-otari-versionGroup">
-                    <div class="footsteps-of-otari-radio ">
-                        <input class="footsteps-of-otari-radioVersionPDF" type="radio"
-                            name="footsteps-of-otari-map-version" value="pdf" id="pdf"
+        <label class="footsteps-and-maps-optionLabel" for="map-version">Map Version:</label>
+        <div class="footsteps-and-maps-radio-group">
+            <div class="footsteps-and-maps-community">
+                <p class="footsteps-and-maps-versionLabel">Community Content</p>
+                <div class="footsteps-and-maps-versionGroup">
+                    <div class="footsteps-and-maps-radio ">
+                        <input class="footsteps-and-maps-radioVersionPDF" type="radio"
+                            name="footsteps-and-maps-map-version" value="pdf" id="pdf"
                             {{#if (eq mapVersion "pdf")}}checked{{/if}} />
                         <label for="pdf"> PDF</label>
                     </div>
-                    <div class="footsteps-of-otari-radio ">
-                        <input class="footsteps-of-otari-radioVersionCommunity" type="radio"
-                            name="footsteps-of-otari-map-version" value="community" id="community"
+                    <div class="footsteps-and-maps-radio ">
+                        <input class="footsteps-and-maps-radioVersionCommunity" type="radio"
+                            name="footsteps-and-maps-map-version" value="community" id="community"
                             {{#if (eq mapVersion "community")}}checked{{/if}} />
                         <label for="community"> Narchy</label>
                     </div>
                 </div>
             </div>
-            <div class="footsfootsteps-of-otari-premium">
-                <p class="footsteps-of-otari-versionLabel">Premium Module</p>
-                <div class="footsteps-of-otari-versionGroup">
-                    <div class="footsteps-of-otari-radio ">
-                        <input class="footsteps-of-otari-radioVersionClassic" type="radio"
-                            name="footsteps-of-otari-map-version" value="classic" id="classic"
+            <div class="footsfootsteps-and-maps-premium">
+                <p class="footsteps-and-maps-versionLabel">Premium Module</p>
+                <div class="footsteps-and-maps-versionGroup">
+                    <div class="footsteps-and-maps-radio ">
+                        <input class="footsteps-and-maps-radioVersionClassic" type="radio"
+                            name="footsteps-and-maps-map-version" value="classic" id="classic"
                             {{#if (eq mapVersion "classic")}}checked{{/if}} />
                         <label for="classic"> Classic</label>
                     </div>
-                    <div class="footsteps-of-otari-radio">
-                        <input class="footsteps-of-otari-radioVersionRemaster" type="radio"
-                            name="footsteps-of-otari-map-version" value="remaster" id="remaster"
+                    <div class="footsteps-and-maps-radio">
+                        <input class="footsteps-and-maps-radioVersionRemaster" type="radio"
+                            name="footsteps-and-maps-map-version" value="remaster" id="remaster"
                             {{#if (eq mapVersion "remaster")}}checked{{/if}} />
                         <label for="remaster"> Remaster </label>
                     </div>
@@ -39,47 +39,47 @@
         </div>
     </div>
     <div class="map-selection-floor">
-        <label class="footsteps-of-otari-optionLabel" for="map-floor">Gauntlight level:</label>
-        <div class="footsteps-of-otari-radio-group">
-            <div class="footsteps-of-otari-radio">
-                <input class="footsteps-of-otari-radioLevelTwo" type="radio" id="floor-two"
-                    name="footsteps-of-otari-floor" value="two"
+        <label class="footsteps-and-maps-optionLabel" for="map-floor">Gauntlight level:</label>
+        <div class="footsteps-and-maps-radio-group">
+            <div class="footsteps-and-maps-radio">
+                <input class="footsteps-and-maps-radioLevelTwo" type="radio" id="floor-two"
+                    name="footsteps-and-maps-floor" value="two"
                     {{#if (eq mapLevel "two")}}checked{{/if}}>
                 <label for="floor-two">Two</label>
             </div>
-            <div class="footsteps-of-otari-radio">
-                <input class="footsteps-of-otari-radioLevelThree" type="radio" id="floor-three"
-                    name="footsteps-of-otari-floor" value="three"
+            <div class="footsteps-and-maps-radio">
+                <input class="footsteps-and-maps-radioLevelThree" type="radio" id="floor-three"
+                    name="footsteps-and-maps-floor" value="three"
                     {{#if (eq mapLevel "three")}}checked{{/if}}>
                 <label for="floor-three">Three</label>
             </div>
-            <div class="footsteps-of-otari-radio">
-                <input class="footsteps-of-otari-radioLevelFour" type="radio" id="floor-four"
-                    name="footsteps-of-otari-floor" value="four"
+            <div class="footsteps-and-maps-radio">
+                <input class="footsteps-and-maps-radioLevelFour" type="radio" id="floor-four"
+                    name="footsteps-and-maps-floor" value="four"
                     {{#if (eq mapLevel "four")}}checked{{/if}}>
                 <label for="floor-four">Four</label>
             </div>
         </div>
     </div>
-    <div class="footsteps-of-otari-ghostControls">
-        <button class="footsteps-of-otari-playControl footsteps-of-otari-button" type="button"
+    <div class="footsteps-and-maps-ghostControls">
+        <button class="footsteps-and-maps-playControl footsteps-and-maps-button" type="button"
             data-action="playToggle"><i class="fas fa-play"></i> <i class="fas fa-pause"></i></button>
-        <select class="footsteps-of-otari-playSpeed footsteps-of-otari-button" id="ghostSpeed">
+        <select class="footsteps-and-maps-playSpeed footsteps-and-maps-button" id="ghostSpeed">
             <option value=".25">1/4x</option>
             <option value=".5">1/2x</option>
             <option selected="selected" value="1">1x</option>
             <option value="1.5">1.5x</option>
             <option value="2">2x</option>
         </select>
-        <div class="footsteps-of-otari-time">
-            <input type="range" min="0" max="100" value="{{progressBar}}" class="footsteps-of-otari-timelineSlider"
+        <div class="footsteps-and-maps-time">
+            <input type="range" min="0" max="100" value="{{progressBar}}" class="footsteps-and-maps-timelineSlider"
                 id="ghostTimelineSlider" step="0.01">
         </div>
     </div>
-    <div class="footsteps-of-otari-footer">
-        <button class="footsteps-of-otari-create footsteps-of-otari-button" type="button"
+    <div class="footsteps-and-maps-footer">
+        <button class="footsteps-and-maps-create footsteps-and-maps-button" type="button"
             data-action="createGhost">Create ghost</button>
-        <button class="footsteps-of-otari-erase footsteps-of-otari-button" type="button"
+        <button class="footsteps-and-maps-erase footsteps-and-maps-button" type="button"
             data-action="removeGhost">Remove ghost</button>
     </div>
 </div>

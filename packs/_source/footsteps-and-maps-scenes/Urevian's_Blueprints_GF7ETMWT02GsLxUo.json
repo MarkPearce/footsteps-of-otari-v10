@@ -1,0 +1,181 @@
+{
+  "_id": "GF7ETMWT02GsLxUo",
+  "name": "Urevian's Blueprints",
+  "active": false,
+  "navigation": true,
+  "navOrder": 0,
+  "navName": "",
+  "foreground": null,
+  "thumb": "modules/footsteps-and-maps/artwork/thumbs/foo-devilmap.png",
+  "width": 7000,
+  "height": 3150,
+  "padding": 0.25,
+  "initial": {},
+  "backgroundColor": "#605652",
+  "grid": {
+    "size": 50,
+    "type": 0,
+    "color": "#a3875f",
+    "alpha": 0.2,
+    "distance": 5,
+    "units": "ft"
+  },
+  "tokenVision": false,
+  "fogExploration": true,
+  "fogReset": 1655155320787,
+  "globalLight": false,
+  "globalLightThreshold": null,
+  "darkness": 0,
+  "drawings": [],
+  "tokens": [],
+  "lights": [],
+  "notes": [],
+  "sounds": [],
+  "templates": [],
+  "tiles": [
+    {
+      "_id": "9HAPouB5uoW0G244",
+      "width": 2450,
+      "height": 3000,
+      "x": 1750,
+      "y": 800,
+      "z": 100,
+      "rotation": 0,
+      "alpha": 1,
+      "hidden": false,
+      "locked": false,
+      "overhead": false,
+      "occlusion": {
+        "mode": 1,
+        "alpha": 0,
+        "radius": null
+      },
+      "video": {
+        "loop": true,
+        "autoplay": true,
+        "volume": 0
+      },
+      "flags": {},
+      "texture": {
+        "src": "modules/footsteps-and-maps/artwork/npc-maps/D10-av-blueprint-level05.webp",
+        "scaleX": 1,
+        "scaleY": 1,
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0,
+        "tint": null
+      },
+      "roof": false,
+      "_key": "!scenes.tiles!GF7ETMWT02GsLxUo.9HAPouB5uoW0G244"
+    },
+    {
+      "_id": "ZwgrqAEmFKp4SvU0",
+      "width": 2250,
+      "height": 3150,
+      "x": 4250,
+      "y": 800,
+      "z": 100,
+      "rotation": 0,
+      "alpha": 1,
+      "hidden": false,
+      "locked": false,
+      "overhead": false,
+      "occlusion": {
+        "mode": 1,
+        "alpha": 0,
+        "radius": null
+      },
+      "video": {
+        "loop": true,
+        "autoplay": true,
+        "volume": 0
+      },
+      "flags": {},
+      "texture": {
+        "src": "modules/footsteps-and-maps/artwork/npc-maps/D10-av-blueprint-level06.webp",
+        "scaleX": 1,
+        "scaleY": 1,
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0,
+        "tint": null
+      },
+      "roof": false,
+      "_key": "!scenes.tiles!GF7ETMWT02GsLxUo.ZwgrqAEmFKp4SvU0"
+    },
+    {
+      "_id": "HeM77xZar7Ko4AlS",
+      "width": 1850,
+      "height": 2600,
+      "x": 6550,
+      "y": 800,
+      "z": 100,
+      "rotation": 0,
+      "alpha": 1,
+      "hidden": false,
+      "locked": false,
+      "overhead": false,
+      "occlusion": {
+        "mode": 1,
+        "alpha": 0,
+        "radius": null
+      },
+      "video": {
+        "loop": true,
+        "autoplay": true,
+        "volume": 0
+      },
+      "flags": {},
+      "texture": {
+        "src": "modules/footsteps-and-maps/artwork/npc-maps/D10-av-blueprint-level07.webp",
+        "scaleX": 1,
+        "scaleY": 1,
+        "offsetX": 0,
+        "offsetY": 0,
+        "rotation": 0,
+        "tint": null
+      },
+      "roof": false,
+      "_key": "!scenes.tiles!GF7ETMWT02GsLxUo.HeM77xZar7Ko4AlS"
+    }
+  ],
+  "walls": [],
+  "playlist": null,
+  "playlistSound": null,
+  "journal": null,
+  "weather": "",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.footsteps-and-maps.footsteps-and-maps-scenes.GF7ETMWT02GsLxUo"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "1H5XKXyphHEmdKWt": 3
+  },
+  "background": {
+    "src": null,
+    "offsetX": 0,
+    "offsetY": 0,
+    "scaleX": 1,
+    "scaleY": 1,
+    "rotation": 0,
+    "tint": null
+  },
+  "foregroundElevation": null,
+  "fogOverlay": null,
+  "fogExploredColor": null,
+  "fogUnexploredColor": null,
+  "journalEntryPage": null,
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1670712297867,
+    "modifiedTime": 1670712297867,
+    "lastModifiedBy": "1H5XKXyphHEmdKWt"
+  },
+  "folder": null,
+  "sort": 0,
+  "_key": "!scenes!GF7ETMWT02GsLxUo"
+}

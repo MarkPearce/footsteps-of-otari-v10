@@ -1,21 +1,19 @@
-# Footsteps of Otari
-
-![the latest version zip](https://img.shields.io/github/downloads/MarkPearce/footsteps-of-otari-v10/latest/footsteps-of-otari.zip)
+# Footsteps and Maps
 
 With this module the GM can add an animation of a ghostly image and its foot prints as it makes its way though the dungeon.
-It also contains additional assets, tokens and maps for the Abomination vaults adventure path by Paizo.
+It also contains additional assets, tokens and maps for your adventures.
 
 There are Journals for the NPC Map handouts, the other assets you can find in the /artwork directory.
 
 Map assets and artwork by Forgotten Adventures, https://www.forgotten-adventures.net/
 Vollok token inspired by and derived from artwork by Greg Bruni, https://www.gregbrunicreations.com/
 
-![a mossy skull, graven with symbol of Nhimboloth](https://i.imgur.com/o6GwHgJ.png)
+![a mossy skull](https://i.imgur.com/o6GwHgJ.png)
 
 **Ghost Trail Animations**
-A Dynamically controlled particle system for the GM to play an animation of the ghost's path in AV.
+A Dynamically controlled particle system for the GM to play an animation of a ghost's path.
 
-To use: Add the Macro "Open Footsteps Control" from the Footsteps of Otari Macro folder.
+To use: Add the Macro "Open Footsteps Control" from the Footsteps and Maps Macro folder.
 
 Click on it to open the floating control window. If you havent modified the MapIDs it will auto-detect the path to play.
 Use play/pause/speed control on the animation, or scrub with the timeline
@@ -33,7 +31,7 @@ Boss Skrawg – Inspired by DMSteve, https://www.recallknowledge.com/
 Graulgust's sketch
 ![a rough sketch](https://i.imgur.com/GZFlb8s.png)
 
-Volluk’s Desk - blueprints of levels 1-3
+Volluk's Desk - blueprints of levels 1-3
 ![blueprints of the first three levels](https://i.imgur.com/MSxc1bN.png)
 
 **Tokens**
@@ -46,5 +44,3 @@ Hazard tokens for the BrownMold(B20) and Hall of Hatred(B29)
 **Area Map for Wrin's Wonders**
 
 ![a tent by the river](https://i.imgur.com/1DFAtVv.png)
-
-Artwork contained here was previously published in the AV Accesscories module, Map tiles which are only suitable for the community content maps have been removed.

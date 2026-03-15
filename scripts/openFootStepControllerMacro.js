@@ -1,1 +1,1 @@
-game.modules.get('footsteps-of-otari')?.api?._openFootstepsController()
+game.modules.get('footsteps-and-maps')?.api?._openFootstepsController()

@@ -1,0 +1,75 @@
+{
+  "_id": "tJ4Ie1PJTuRWDi9D",
+  "name": "Caligni Maps",
+  "active": false,
+  "navigation": true,
+  "navOrder": 0,
+  "navName": "",
+  "foreground": null,
+  "thumb": "modules/footsteps-and-maps/artwork/thumbs/foo-caligni.png",
+  "width": 4134,
+  "height": 2569,
+  "padding": 0.25,
+  "initial": {},
+  "backgroundColor": "#877a5e",
+  "grid": {
+    "size": 50,
+    "type": 0,
+    "color": "#000000",
+    "alpha": 0.2,
+    "distance": 5,
+    "units": "ft"
+  },
+  "tokenVision": true,
+  "fogExploration": true,
+  "fogReset": 1658266518174,
+  "globalLight": false,
+  "globalLightThreshold": null,
+  "darkness": 0,
+  "drawings": [],
+  "tokens": [],
+  "lights": [],
+  "notes": [],
+  "sounds": [],
+  "templates": [],
+  "tiles": [],
+  "walls": [],
+  "playlist": null,
+  "playlistSound": null,
+  "journal": null,
+  "weather": "",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.footsteps-and-maps.footsteps-and-maps-scenes.tJ4Ie1PJTuRWDi9D"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "1H5XKXyphHEmdKWt": 3
+  },
+  "background": {
+    "src": "modules/footsteps-and-maps/artwork/npc-maps/H5%20-%20Caligni%20maps.webp",
+    "offsetX": 0,
+    "offsetY": 0,
+    "scaleX": 1,
+    "scaleY": 1,
+    "rotation": 0,
+    "tint": null
+  },
+  "foregroundElevation": null,
+  "fogOverlay": null,
+  "fogExploredColor": null,
+  "fogUnexploredColor": null,
+  "journalEntryPage": null,
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1670712297876,
+    "modifiedTime": 1670712297876,
+    "lastModifiedBy": "1H5XKXyphHEmdKWt"
+  },
+  "folder": null,
+  "sort": 0,
+  "_key": "!scenes!tJ4Ie1PJTuRWDi9D"
+}

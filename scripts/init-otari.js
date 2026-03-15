@@ -150,7 +150,7 @@ class FootstepsOfOtari {
 
 Hooks.on("init", function () {
   // once set up, we create our API object. Each function needs an entry
-  game.modules.get("footsteps-of-otari").api = {
+  game.modules.get("footsteps-and-maps").api = {
     _makeGhost: FootstepsOfOtari._makeGhost,
     _removeGhosts: FootstepsOfOtari._removeGhosts,
     _openFootstepsController: FootstepsOfOtari._openFootstepsController,
@@ -165,7 +165,7 @@ Hooks.on("init", function () {
   };
   // now that we've created our API, inform other modules we are ready
   // provide a reference to the module api as the hook arguments for good measure
-  Hooks.callAll("FootstepsOfOtari", game.modules.get("footsteps-of-otari").api);
+  Hooks.callAll("FootstepsOfOtari", game.modules.get("footsteps-and-maps").api);
 });
 
 Hooks.on("canvasInit", async () => {
@@ -180,12 +180,12 @@ Hooks.on("canvasInit", async () => {
 Hooks.once("ready", async () => {
   gsap.registerPlugin(MotionPathPlugin, PixiPlugin);
   //Setup complete
-  console.log("<<<<<<<<<< Footsteps of Otari >>>>>>>>>>");
+  console.log("<<<<<<<<<< Footsteps and Maps >>>>>>>>>>");
 });
 
 Hooks.once("socketlib.ready", () => {
   //register module
-  socket = socketlib.registerModule("footsteps-of-otari");
+  socket = socketlib.registerModule("footsteps-and-maps");
   //register socket functions
   /// map the external names of statics above to the API functions below
   socket.register("_makeGhost", makeGhost);
@@ -285,7 +285,7 @@ async function makeGhost() {
 
   if (ghostExists == false) {
     const ghostTexture = await loadTexture(
-      "modules/footsteps-of-otari/artwork/ghost-blob.webp"
+      "modules/footsteps-and-maps/artwork/ghost-blob.webp"
     );
     ghost = new PIXI.Sprite(ghostTexture);
     ghost.name = "otariOne";
@@ -411,7 +411,7 @@ async function makeGhost() {
 
     // Left Footstep Particles
     const leftFoot = await loadTexture(
-      "modules/footsteps-of-otari/artwork/ghost-left.webp"
+      "modules/footsteps-and-maps/artwork/ghost-left.webp"
     );
 
     leftPrintEmitter = new PIXI.particles.Emitter(
@@ -536,7 +536,7 @@ async function makeGhost() {
 
     // Right Footstep Particles
     const rightFoot = await loadTexture(
-      "modules/footsteps-of-otari/artwork/ghost-right.webp"
+      "modules/footsteps-and-maps/artwork/ghost-right.webp"
     );
 
     rightPrintEmitter = new PIXI.particles.Emitter(
@@ -737,7 +737,7 @@ async function openFootstepsController() {
   ghostApplication.mapVersion = mapVersion;
   ghostApplication.mapLevel = mapLevel;
   await game.modules
-    .get("footsteps-of-otari")
+    .get("footsteps-and-maps")
     ?.api?._updatePathSelection(mapVersion, mapLevel, ghostTimeline.progress());
   ghostApplication.render({ force: true });
 }

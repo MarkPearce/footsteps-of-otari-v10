@@ -1,7 +1,7 @@
 {
-  "id": "footsteps-of-otari",
-  "title": "Footsteps of Otari",
-  "description": "Ghostly footprints and player handouts for The Abomination Vaults module",
+  "id": "footsteps-and-maps",
+  "title": "Footsteps and Maps",
+  "description": "Ghostly footprints and player handouts for your adventures",
   "version": "2.0.6",
   "compatibility": {
     "minimum": "12",
@@ -15,9 +15,9 @@
   ],
   "packs": [
     {
-      "name": "footsteps-of-otari-macros",
-      "label": "Footsteps of Otari Macros",
-      "path": "packs/footsteps-of-otari-macros",
+      "name": "footsteps-and-maps-macros",
+      "label": "Footsteps and Maps Macros",
+      "path": "packs/footsteps-and-maps-macros",
       "type": "Macro",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -25,9 +25,9 @@
       }
     },
     {
-      "name": "footsteps-of-otari-scenes",
-      "label": "Footsteps of Otari Scenes",
-      "path": "packs/footsteps-of-otari-scenes",
+      "name": "footsteps-and-maps-scenes",
+      "label": "Footsteps and Maps Scenes",
+      "path": "packs/footsteps-and-maps-scenes",
       "type": "Scene",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -35,9 +35,9 @@
       }
     },
     {
-      "name": "footsteps-of-otari-Journals",
-      "label": "Footsteps of Otari Journals",
-      "path": "packs/footsteps-of-otari-journal",
+      "name": "footsteps-and-maps-journals",
+      "label": "Footsteps and Maps Journals",
+      "path": "packs/footsteps-and-maps-journals",
       "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -65,7 +65,7 @@
     "scripts/footsteps.css"
   ],
   "socket": true,
-  "url": "https://github.com/rune-goblin/footsteps-of-otari",
-  "manifest": "https://github.com/rune-goblin/footsteps-of-otari/releases/latest/download/module.json",
-  "download": "https://github.com/rune-goblin/footsteps-of-otari/releases/latest/download/footsteps-of-otari.zip"
+  "url": "https://github.com/rune-goblin/footsteps-and-maps",
+  "manifest": "https://github.com/rune-goblin/footsteps-and-maps/releases/latest/download/module.json",
+  "download": "https://github.com/rune-goblin/footsteps-and-maps/releases/latest/download/footsteps-and-maps.zip"
 }
