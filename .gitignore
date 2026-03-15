@@ -1,3 +1,9 @@
 .DS_Store
 *.zip
-packs/
+packs/**/LOCK
+packs/**/LOG
+packs/**/LOG.old
+packs/**/*.log
+node_modules/
+package.json
+package-lock.json
