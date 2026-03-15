@@ -1,0 +1,47 @@
+name: Release Module
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get version from tag
+        id: version
+        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Set version in module.json
+        run: |
+          jq '.version = "${{ steps.version.outputs.version }}"' module.json > module.tmp
+          mv module.tmp module.json
+
+      - name: Build zip
+        run: |
+          zip -r footsteps-of-otari.zip . \
+            -x ".git/*" \
+            -x ".github/*" \
+            -x ".gitattributes" \
+            -x ".gitignore" \
+            -x ".DS_Store" \
+            -x "packs/_source/*" \
+            -x "packs/*/LOCK" \
+            -x "packs/*/LOG" \
+            -x "packs/*/LOG.old" \
+            -x "packs/*/*.log" \
+            -x "footsteps-of-otari.zip"
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            footsteps-of-otari.zip
+            module.json
+          generate_release_notes: true
